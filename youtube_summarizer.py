@@ -51,61 +51,15 @@ class YouTubeSummarizer:
         if not self.validate_url(video_url):
             raise ValueError("Invalid YouTube URL provided")
         
-        # Map common language codes to full names
-        language_map = {
-            'zh': 'Chinese',
-            'cn': 'Chinese',
-            'chinese': 'Chinese',
-            'en': 'English',
-            'english': 'English',
-            'es': 'Spanish',
-            'spanish': 'Spanish',
-            'fr': 'French',
-            'french': 'French',
-            'de': 'German',
-            'german': 'German',
-            'ja': 'Japanese',
-            'japanese': 'Japanese',
-            'ko': 'Korean',
-            'korean': 'Korean'
-        }
-        
-        # Normalize language input
-        lang_lower = language.lower()
-        output_language = language_map.get(lang_lower, language)
-        
-        default_prompt = f"""
-        Please provide a comprehensive summary of this YouTube video in {output_language} including:
-        1. Main topic and key points
-        2. Important insights or findings
-        3. Any actionable recommendations
-        4. A brief conclusion
-        
-        Format the summary in a clear, structured way.
-        Important: Please write the entire summary in {output_language}.
-        """
-        
-        final_prompt = prompt or default_prompt
-        
-        try:
-            with Progress(
-                SpinnerColumn(),
-                TextColumn("[progress.description]{task.description}"),
-                console=console
-            ) as progress:
-                task = progress.add_task("Analyzing video...", total=None)
-                
-                response = self.model.generate_content([
-                    video_url,
-                    final_prompt
-                ])
-                
-                progress.update(task, completed=True)
-            
-            return response.text
-        
-        except Exception as e:
-            raise Exception(f"Error generating summary: {str(e)}")
+        # IMPORTANT: Gemini 2.5 Flash does not support direct YouTube video analysis
+        raise Exception(
+            "Cannot access YouTube video content directly.\n\n"
+            "Gemini 2.5 Flash API does not support direct video analysis from YouTube URLs. "
+            "To summarize YouTube videos, you would need to:\n"
+            "1. Extract the video transcript using YouTube API or a transcript extraction library\n"
+            "2. Pass the transcript text to Gemini for summarization\n\n"
+            "Consider using libraries like 'youtube-transcript-api' to extract transcripts first."
+        )
 
 @click.command()
 @click.argument('video_url')
