@@ -1,0 +1,186 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+*.crt
+secrets/
+credentials/
+config/secrets/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.venv
+.virtualenv
+virtualenv/
+pipenv/
+.pipenv/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+test-results/
+junit/
+
+# IDE and Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+.classpath
+*.sublime-project
+*.sublime-workspace
+.ropeproject/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.ruff_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# IPython
+profile_default/
+ipython_config.py
+
+# Operating System
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+Icon
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+*.sqlite3
+*.db
+logs/
+log/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+.~*
+tmp/
+temp/
+
+# Cache directories
+.cache/
+.sass-cache/
+__pycache__/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# API and ML related
+models/
+model_cache/
+.gemini_cache/
+.api_cache/
+embeddings/
+checkpoints/
+*.h5
+*.pkl
+*.pickle
+*.joblib
+*.model
+
+# Output files (be careful with this section)
+output/
+outputs/
+results/
+downloads/
+transcripts/
+summaries/
+*.mp4
+*.mp3
+*.wav
+*.mkv
+*.avi
+
+# Documentation build files
+docs/_build/
+docs/.doctrees/
+site/
+mkdocs.yml
+
+# Package files
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Exceptions - files to track
+!.gitignore
+!.gitkeep
+!README.md
+!requirements.txt
+!.env.example
+!tests/fixtures/
+!docs/examples/
